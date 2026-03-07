@@ -23,7 +23,7 @@ Este repositório contém o meu currículo profissional em formato web, desenvol
 **Richard Esley**
 *Estudante de Bacharelado em Ciência da Computação*
 
-* **Portfólio Profissional:** [Teste aqui](https://certificates-richard-oliveira.vercel.app)
+* **Portfólio Profissional:** [Teste aqui](https://richardesley-dev.vercel.app/)
 * **GitHub:** [@RDEsley](https://github.com/RDEsley)
 * **LinkedIn:** [richardesley](https://www.linkedin.com/in/richardesley/)
 * **E-mail:** [richardesleyso@gmail.com](mailto:richardesleyso@gmail.com)
