@@ -18,24 +18,6 @@ Este repositório contém o meu currículo profissional em formato web, desenvol
 * **JavaScript:** Lógica de interatividade e manipulação do DOM.
 * **Google Fonts:** Tipografia moderna utilizando a fonte Roboto.
 
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-* Um navegador web moderno (Chrome, Firefox, Edge, etc.).
-
-### Passo a Passo
-
-1. **Clone o repositório:**
-   git clone https://github.com/RDEsley/Curriculo_Richard.git
-
-2. **Acesse a pasta:**
-   cd Curriculo_Richard
-
-3. **Abra o arquivo:**
-   Basta abrir o arquivo `index.html` no seu navegador de preferência.
-
----
-
 ## 👨‍💻 Desenvolvedor
 
 **Richard Esley**
