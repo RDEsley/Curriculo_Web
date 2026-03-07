@@ -4,89 +4,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo - Richard Oliveira</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/style.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon-16x16-index.png">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Richard Oliveira - Desenvolvedor Full Stack & UI/UX Focus | Ciência da Computação">
+  <title>Richard Oliveira | Desenvolvedor Full Stack & UI/UX Focus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16-index.png">
+  <meta name="msapplication-TileColor" content="#0f172a">
+  <meta name="theme-color" content="#0f172a">
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>Richard Oliveira</h1>
-      <p class="subtitle">Universitário, apaixonado por tecnologia e inovação</p>
-    </header>
+  <!-- Navegação fixa -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Richard Oliveira</a>
+      <ul class="nav-links">
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#experiencia" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#educacao" data-i18n="nav.education">Educação</a></li>
+        <li><a href="#links" data-i18n="nav.resources">Recursos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div id="lang-toggle" class="lang-toggle" role="group" aria-label="Idioma">
+          <button type="button" data-lang="pt" class="lang-btn active" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" class="lang-btn" aria-pressed="false">EN</button>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-    <section class="summary">
-      <h2>Resumo</h2>
-      <p><em>Sou um jovem universitário enérgico, comunicativo, focado e proativo. Motivado pelas constantes inovações
-          tecnológicas, procuro estágio na área de tecnologia para trabalhar com o que amo. Sou professor musical
-          voluntário na Congregação Cristã no Brasil, Técnico em Informática cadastrado no CTF e estou comprometido em
-          aprender continuamente.</em></p>
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
+      <h1 class="hero-title">Richard Oliveira</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Desenvolvedor Full Stack & UI/UX Focus</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">Estudante de Ciência da Computação • Proativo • Autodidata • Motivado</p>
+      <div class="hero-contact">
+        <a href="mailto:richardesleyso@gmail.com" class="hero-link" title="Email">📧 richardesleyso@gmail.com</a>
+        <a href="tel:+5561998818808" class="hero-link" title="Telefone">📱 (61) 99881-8808</a>
+        <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener" class="hero-link" title="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/RDEsley" target="_blank" rel="noopener" class="hero-link" title="GitHub">GitHub</a>
+      </div>
+      <a href="#sobre" class="hero-cta" data-i18n="hero.cta">Conheça mais</a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+      <h2 class="section-title"><span class="section-icon">👤</span> <span data-i18n="section.about">Sobre</span></h2>
+      <p class="about-text" data-i18n-html="about.text">Estudante de Ciência da Computação no Centro Universitário de Brasília (CEUB) e Técnico em Informática. Possuo experiência no desenvolvimento de aplicações web utilizando <strong>React, Node.js, JavaScript e Python</strong>, além de conhecimento em APIs REST, bancos de dados e versionamento com Git. Tenho perfil autodidata, foco em resolução de problemas e experiência em projetos acadêmicos e pessoais de desenvolvimento de software. Busco oportunidade de estágio ou posição júnior em desenvolvimento de software para aplicar e expandir minhas habilidades técnicas.</p>
+      <p class="about-extra" data-i18n-html="about.extra">Sou <strong>CEO e Fundador da Fate Eight Tech</strong>.</p>
     </section>
 
-    <section class="contact">
-      <h2>Contato</h2>
-      <ul>
-        <li><strong>Telefone:</strong> +55 61 9 9881-8808</li>
-        <li><strong>Email:</strong> <a href="mailto:richardesleyso@gmail.com">richardesleyso@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/richardesley/"
-            target="_blank">linkedin.com/in/richardesley</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/RDEsley" target="_blank">github.com/RDEsley</a></li>
-      </ul>
+    <!-- Experiência -->
+    <section class="section" id="experiencia">
+      <h2 class="section-title"><span class="section-icon">💼</span> <span data-i18n="section.experience">Experiências</span></h2>
+      
+      <article class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jan 2023 – Jul 2024</span>
+          <h3 data-i18n="exp1.title">Técnico em Informática</h3>
+          <p class="timeline-company">Escola Técnica de Brazlândia (ETB) | Brazlândia, DF</p>
+          <p data-i18n="exp1.desc">Líder de equipe no desenvolvimento de plataforma web responsiva para empresas de dedetização. Coordenei a divisão de tarefas, organizei cronogramas e garanti entregas com qualidade. Fui referência entre colegas, auxiliando em projetos paralelos e colaborando com professores no suporte em sala de aula.</p>
+          <a href="https://github.com/RDEsley" target="_blank" rel="noopener" class="link-inline" data-i18n="exp1.link">Ver projeto no GitHub →</a>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jan 2021 – Dez 2021</span>
+          <h3 data-i18n="exp2.title">Assistente Administrativo</h3>
+          <p class="timeline-company">Brasali Dedetizadora | Brasília, DF</p>
+          <p data-i18n="exp2.desc">Organização de arquivos administrativos e financeiros, emissão de relatórios, controle de estoque e atendimento ao cliente. Automatizei relatórios e planilhas com Microsoft Office, otimizando o tempo de resposta da equipe.</p>
+        </div>
+      </article>
     </section>
 
-    <section class="education">
-      <h2>Formação Acadêmica</h2>
-      <ul>
-        <li>Bacharel em Ciência da Computação - CEUB, Taguatinga (2023 - 2027)</li>
-        <li>Técnico em Informática - Escola Técnica de Brazlândia (2023 - 2024)</li>
-        <li>Inglês Avançado - Centro Interescolar de Línguas (2016 - 2021)</li>
-      </ul>
-    </section>
-
-    <section class="skills">
-      <h2>Habilidades</h2>
-      <ul>
-        <li>Análise de Dados: Experiência com coleta, processamento e interpretação de dados.</li>
-        <li>Noções de Programação: Conhecimento básico e conceitos fundamentais.</li>
-        <li>Pacote Microsoft Office (Avançado): Proficiência em Word, Excel e PowerPoint.</li>
-        <li>Boas Práticas de Programação: Aplicação de princípios como Clean Code.</li>
-      </ul>
-      <h3>Conhecimentos Técnicos:</h3>
-      <div class="skills-tags">
-        <span>Python</span><span>Java</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
-        <span>Kotlin</span><span>HTML5</span><span>CSS3</span>
+    <!-- Habilidades -->
+    <section class="section" id="habilidades">
+      <h2 class="section-title"><span class="section-icon">⚡</span> <span data-i18n="section.skills">Habilidades</span></h2>
+      
+      <div class="skills-grid">
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.languages">Linguagens</h4>
+          <div class="skills-tags">JavaScript, Python, C#</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.frontend">Frontend</h4>
+          <div class="skills-tags">React, HTML, CSS</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.backend">Backend</h4>
+          <div class="skills-tags">Node.js, APIs REST</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.database">Banco de Dados</h4>
+          <div class="skills-tags">SQL, MongoDB, Supabase</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.tools">Ferramentas</h4>
+          <div class="skills-tags">Git, Github</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.methodologies">Metodologias</h4>
+          <div class="skills-tags">Scrum, Kanban</div>
+        </div>
+        <div class="skills-group">
+          <h4 class="skills-label" data-i18n="skills.spokenLang">Idiomas</h4>
+          <div class="skills-tags" data-i18n="skills.fluentEnglish">Inglês Fluente</div>
+        </div>
       </div>
     </section>
 
-    <section class="experience">
-      <h2>Experiência</h2>
-      <ul>
-        <li>Assistente administrativo - Brasali Dedetizadora (Jan/2021 - Julho/2021)</li>
-      </ul>
+    <!-- Educação -->
+    <section class="section" id="educacao">
+      <h2 class="section-title"><span class="section-icon">🎓</span> <span data-i18n="section.education">Educação</span></h2>
+      
+      <article class="edu-item">
+        <span class="edu-date">Jan 2023 – Dez 2026</span>
+        <h3 data-i18n="edu1.title">Bacharel em Ciência da Computação</h3>
+        <p>Centro Universitário de Brasília (CEUB) | Taguatinga, DF</p>
+      </article>
+      <article class="edu-item">
+        <span class="edu-date">Jan 2023 – Jul 2024</span>
+        <h3 data-i18n="edu3.title">Técnico em Informática</h3>
+        <p>Escola Técnica de Brazlândia (ETB) | Brazlândia, DF</p>
+      </article>
+      <article class="edu-item">
+        <span class="edu-date">Jan 2016 – Jul 2021</span>
+        <h3 data-i18n="edu2.title">Inglês Avançado</h3>
+        <p>Centro Interescolar de Línguas de Brazlândia (CILB) | Brazlândia, DF</p>
+      </article>
     </section>
 
-    <section class="projects">
-      <h2>Visualizar Certificados</h2>
-      <!--<a href="src/assets/certificados.html" class="btn">Acessar Certificados</a> Ou --><a
-        href="https://certifications-richard-oliveira.vercel.app" class="btn">Hospedado no Vercel</a>
+    <!-- Links e CTAs -->
+    <section class="section section-cta" id="links">
+      <h2 class="section-title"><span class="section-icon">🔗</span> <span data-i18n="section.resources">Recursos</span></h2>
+      <div class="cta-grid">
+        <a href="https://certificates-richard-oliveira.vercel.app" target="_blank" rel="noopener" class="cta-card">
+          <span class="cta-icon">📜</span>
+          <span class="cta-title" data-i18n="cta.certificates">Certificados</span>
+          <span class="cta-desc" data-i18n="cta.certificatesDesc">Veja minhas certificações</span>
+        </a>
+        <a href="src/pdfs/CV - Richard Oliveira (PT-BR).pdf" class="cta-card" target="_blank" rel="noopener">
+          <span class="cta-icon">📄</span>
+          <span class="cta-title" data-i18n="cta.pdfPt">Currículo PDF (PT)</span>
+          <span class="cta-desc" data-i18n="cta.pdfPtDesc">Download em português</span>
+        </a>
+        <a href="src/pdfs/CV - Richard Oliveira (EN).pdf" class="cta-card" target="_blank" rel="noopener">
+          <span class="cta-icon">📄</span>
+          <span class="cta-title" data-i18n="cta.pdfEn">Currículo PDF (EN)</span>
+          <span class="cta-desc" data-i18n="cta.pdfEnDesc">Download em inglês</span>
+        </a>
+      </div>
     </section>
+  </main>
 
-    <section class="projects">
-      <h2>Visualizar Curriculo em PDF (Atualizado)</h2>
-      <a href="src/pdfs/CV - Richard Oliveira(Leng-PT).pdf" class="btn" target="_blank">Acessar Currículo PDF em (PT)</a>
-      <a href="src/pdfs/CV - Richard Oliveira (Leng-EN).pdf" class="btn" target="_blank">Acessar Currículo PDF em (EN)</a>
-    </section>
-
-  </div>
-
-  <footer>
-    <p>&copy; 2024 - Desenvolvido com paixão por Richard Esley.</p>
+  <footer class="footer">
+    <p>&copy; <span id="current-year">2025</span> Richard Esley Silva Oliveira • <span data-i18n="footer.madeWith">Desenvolvido com paixão</span></p>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/richardesley" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/RDEsley" target="_blank" rel="noopener">GitHub</a>
+    </div>
   </footer>
 
+  <script src="src/scripts/main.js"></script>
 </body>
 
 </html>
