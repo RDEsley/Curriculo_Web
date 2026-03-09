@@ -77,22 +77,6 @@ cd Curriculo_Web
 
 ---
 
-## 📂 Estrutura do Projeto
-
-```
-Curriculo_Web/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   └── images/
-└── README.md
-```
-
----
-
 ## 📸 Preview
 
 🌐 Currículo profissional em formato web com design moderno e responsivo. [Clique Aqui](https://curriculo-richard-oliveira.vercel.app/)
