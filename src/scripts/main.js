@@ -222,6 +222,29 @@ function initCurrentYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
+// ===== Botão Voltar ao Topo =====
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const showThreshold = 400;
+
+  const handleScroll = () => {
+    if (window.scrollY > showThreshold) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
 // ===== Inicialização =====
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -229,4 +252,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initScrollAnimations();
   initCurrentYear();
+  initBackToTop();
 });
