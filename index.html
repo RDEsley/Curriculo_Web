@@ -143,7 +143,7 @@
           <span class="cta-title" data-i18n="proj3.title">Insta Analytics</span>
           <span class="cta-desc" data-i18n="proj3.desc">Análises detalhadas de perfis do Instagram com ML, Scraping e APIs. React, TypeScript, Tailwind, Supabase</span>
         </a>
-        <a href="https://github.com/RDEsley/GMC-Granja-Mult-Core" target="_blank" rel="noopener" class="cta-card">
+        <a href="https://github.com/RDEsley/GMC-Granja-Mult-Core" target="_blank" rel="noopener" class="cta-card" id="gmc-project-card" data-private-repo>
           <span class="cta-icon">🪶</span>
           <span class="cta-title" data-i18n="proj4.title">GMC - Granja Mult Core</span>
           <span class="cta-desc" data-i18n="proj4.desc">Sistema de gestão de granja avícola com controle de lotes, estoque, despesas e análise financeira. Java, Spring Boot, MySQL, React, TypeScript, Tailwind, Supabase</span>
@@ -238,6 +238,16 @@
   <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
     <span class="back-to-top-icon">↑</span>
   </button>
+
+  <!-- Aviso repositório privado GMC -->
+  <div id="gmc-private-aviso" class="aviso-overlay" role="alert" aria-live="polite" hidden>
+    <div class="aviso-box">
+      <span class="aviso-icon">🔒</span>
+      <h3 class="aviso-title" data-i18n="aviso.privateTitle">Repositório privado</h3>
+      <p class="aviso-text" data-i18n="aviso.privateText">O repositório GMC - Granja Mult Core está privado no momento.</p>
+      <button type="button" class="aviso-close" id="gmc-aviso-close" aria-label="Fechar">×</button>
+    </div>
+  </div>
 
   <script src="src/scripts/main.js"></script>
 </body>

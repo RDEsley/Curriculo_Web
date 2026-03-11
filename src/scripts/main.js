@@ -26,6 +26,7 @@ const translations = {
     'exp0.present': 'Presente',
     'exp0.title': 'Fundador & Desenvolvedor',
     'exp0.desc': 'Fundei e lidero startup de tecnologia focada no desenvolvimento de produtos digitais e soluções web. Responsável por arquitetura de sistemas, decisões de produto, UI/UX e gestão de projetos. Prospecto clientes e conduzo o ciclo completo de desenvolvimento — do levantamento de requisitos à entrega.',
+    'exp0.link': 'Conhecer o site →',
     'exp1.title': 'Líder Técnico de Equipe (Projeto Acadêmico)',
     'exp1.desc': 'Liderança de equipe no desenvolvimento de plataforma web responsiva para gestão de controle de pragas. Coordenei divisão de tarefas, cronogramas e garanti entrega com qualidade e pontualidade. Apoiei colegas com dificuldades técnicas e colaborei com professores no suporte em sala.',
     'exp2.title': 'Assistente Administrativo',
@@ -33,13 +34,14 @@ const translations = {
     'exp4.title': 'Líder de Equipe — Projeto Integrador I (Insta Analytics)',
     'exp4.desc': 'Lidero equipe de 3 integrantes no Projeto Integrador, desenvolvendo o InstaAnalytics — plataforma de análise de perfis do Instagram para influenciadores e empresas. Defino funções, metas e cronogramas. Organizo sprints com Scrum/Kanban e garanto integração frontend/backend.',
     'exp4.link': 'Ver projeto no GitHub →',
+    'exp3.link': 'Ver projeto no GitHub →',
     'exp5.title': 'Líder de Equipe — Projeto Integrador II e III (GMC)',
     'exp5.desc': 'Lidero equipe de 5 integrantes no desenvolvimento do Granja Mult Core — sistema focado na digitalização da gestão avícola, automatizando o controle de lotes, estoque, despesas e análise financeira detalhada.',
     'skills.frontend': 'Frontend',
     'skills.uiux': 'UI/UX',
     'skills.backend': 'Backend',
     'skills.database': 'Banco de Dados',
-    'skills.tools': 'Ferramentas',
+    'skills.tools': 'DevOps & Ferramentas',
     'skills.methodologies': 'Metodologias',
     'skills.spokenLang': 'Idiomas',
     'skills.fluentEnglish': 'Português (Nativo) • Inglês (Fluente)',
@@ -61,6 +63,8 @@ const translations = {
     'cta.pdfPtDesc': 'Download em português',
     'cta.pdfEn': 'Currículo PDF (EN)',
     'cta.pdfEnDesc': 'Download em inglês',
+    'aviso.privateTitle': 'Repositório privado',
+    'aviso.privateText': 'O repositório GMC - Granja Mult Core está privado no momento.',
     'footer.madeWith': 'Desenvolvido com paixão'
   },
   en: {
@@ -84,6 +88,7 @@ const translations = {
     'exp0.present': 'Present',
     'exp0.title': 'Founder & Developer',
     'exp0.desc': 'Founded and lead a technology startup focused on digital products and web solutions. Responsible for system architecture, product decisions, UI/UX and project management. Prospect clients and lead the full development cycle — from requirements gathering to delivery.',
+    'exp0.link': 'Visit the site →',
     'exp1.title': 'Technical Team Leader (Academic Project)',
     'exp1.desc': 'Led team in developing a responsive web platform for pest management control. Coordinated task division, schedules and ensured quality, on-time delivery. Supported peers with technical difficulties and collaborated with teachers in classroom support.',
     'exp2.title': 'Administrative Assistant',
@@ -91,13 +96,14 @@ const translations = {
     'exp4.title': 'Team Leader — Integrator Project I (Insta Analytics)',
     'exp4.desc': 'Lead a 3-member team in the Integrator Project, developing InstaAnalytics — Instagram profile analytics platform for influencers and businesses. Define roles, goals and schedules. Organize sprints with Scrum/Kanban and ensure frontend/backend integration.',
     'exp4.link': 'View project on GitHub →',
+    'exp3.link': 'View project on GitHub →',
     'exp5.title': 'Team Leader — Integrator Project II & III (GMC)',
     'exp5.desc': 'Lead a 5-member team in developing Granja Mult Core — system for poultry farm management digitization, automating batch, inventory, expense and financial analysis control.',
     'skills.frontend': 'Frontend',
     'skills.uiux': 'UI/UX',
     'skills.backend': 'Backend',
     'skills.database': 'Database',
-    'skills.tools': 'Tools',
+    'skills.tools': 'DevOps & Tools',
     'skills.methodologies': 'Methodologies',
     'skills.spokenLang': 'Languages',
     'skills.fluentEnglish': 'Portuguese (Native) • English (Fluent)',
@@ -119,6 +125,8 @@ const translations = {
     'cta.pdfPtDesc': 'Download in Portuguese',
     'cta.pdfEn': 'Resume PDF (EN)',
     'cta.pdfEnDesc': 'Download in English',
+    'aviso.privateTitle': 'Private repository',
+    'aviso.privateText': 'The GMC - Granja Mult Core repository is currently private.',
     'footer.madeWith': 'Made with passion'
   }
 };
@@ -245,6 +253,38 @@ function initBackToTop() {
   handleScroll();
 }
 
+// ===== Aviso repositório privado GMC =====
+function initGmcAviso() {
+  const card = document.getElementById('gmc-project-card');
+  const aviso = document.getElementById('gmc-private-aviso');
+  const closeBtn = document.getElementById('gmc-aviso-close');
+
+  const showAviso = () => {
+    aviso.hidden = false;
+    requestAnimationFrame(() => aviso.classList.add('visible'));
+    document.body.style.overflow = 'hidden';
+  };
+
+  const hideAviso = () => {
+    aviso.classList.remove('visible');
+    document.body.style.overflow = '';
+    setTimeout(() => { aviso.hidden = true; }, 300);
+  };
+
+  card?.addEventListener('click', (e) => {
+    e.preventDefault();
+    showAviso();
+  });
+
+  closeBtn?.addEventListener('click', hideAviso);
+  aviso?.addEventListener('click', (e) => {
+    if (e.target === aviso) hideAviso();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && aviso?.classList.contains('visible')) hideAviso();
+  });
+}
+
 // ===== Inicialização =====
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -253,4 +293,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCurrentYear();
   initBackToTop();
+  initGmcAviso();
 });

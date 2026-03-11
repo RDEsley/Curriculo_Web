@@ -479,6 +479,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.section-cta .cta-title,
+.section-cta .cta-desc {
+  text-align: center;
+}
+
 .cta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -513,11 +518,15 @@ body {
 .cta-title {
   font-weight: 600;
   font-size: 1rem;
+  text-align: left;
+  width: 100%;
 }
 
 .cta-desc {
   font-size: 0.8rem;
   color: var(--text-muted);
+  text-align: left;
+  width: 100%;
 }
 
 .cta-note {
@@ -636,6 +645,89 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1;
+}
+
+/* ===== Aviso repositório privado ===== */
+.aviso-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.aviso-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.aviso-overlay[hidden] {
+  display: none !important;
+}
+
+.aviso-overlay:not([hidden]).visible {
+  display: flex;
+}
+
+.aviso-box {
+  position: relative;
+  max-width: 360px;
+  width: 90%;
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px var(--shadow-lg);
+  text-align: center;
+}
+
+.aviso-icon {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.aviso-title {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+}
+
+.aviso-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.aviso-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.aviso-close:hover {
+  color: var(--primary);
+  background: var(--border);
 }
 
 /* ===== Responsivo ===== */
